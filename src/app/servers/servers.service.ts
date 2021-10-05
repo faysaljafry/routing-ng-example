@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import { StringifyOptions } from 'querystring';
-
 @Injectable({
   providedIn: 'root',
 })
