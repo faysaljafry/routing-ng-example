@@ -6,7 +6,7 @@ export class ServersService {
   private servers = [
     {
       id: 1,
-      name: 'Productionserver',
+      name: 'ProductionServer',
       status: 'online',
     },
     {

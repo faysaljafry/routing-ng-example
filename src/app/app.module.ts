@@ -12,12 +12,14 @@ import { UserComponent } from './users/user/user.component';
 import { ServerComponent } from './servers/server/server.component';
 import { EditServerComponent } from './servers/edit-server/edit-server.component';
 import { RouterModule, Routes } from '@angular/router';
+//import { HttpClient } from '@angular/common/http';
 
 const appRoutes: Routes = [
   { path: 'users', component: UsersComponent },
   { path: '', component: HomeComponent },
   { path: 'servers', component: ServersComponent },
-  //{ path : 'users', component: UsersComponent },
+  { path: 'users/:id/:name', component: UserComponent },
+  { path: 'servers/:id/edit', component: EditServerComponent },
 ];
 @NgModule({
   declarations: [
@@ -29,7 +31,13 @@ const appRoutes: Routes = [
     EditServerComponent,
     UserComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, RouterModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    //HttpClient,
+    RouterModule.forRoot(appRoutes),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
