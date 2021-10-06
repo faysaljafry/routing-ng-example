@@ -7,6 +7,7 @@ import { ServersService } from './servers.service';
   styleUrls: ['./servers.component.css'],
 })
 export class ServersComponent implements OnInit {
+  message = 'Hello Worldl';
   servers: { id: number; name: string; status: string }[] = [];
   constructor(private serverService: ServersService) {}
 
